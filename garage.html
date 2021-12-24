@@ -1,0 +1,305 @@
+<!doctype html>
+<html style="background-color: #2d2e2e">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<!-- Meta -->
+	<meta name="description" content="Free worldwide real-time typing competition. Compete in typing races while improving your typing skills."/>
+	<meta name="author" content="FTW Innovations, Inc"/>
+<!--	<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+	<!-- ohPLHa4nzsuJ6YDnDSqcyN7YoCc --> <!-- for alexa -->
+	<meta name="google-site-verification" content="5KYNE_WO1doqosyiF3WC2_5F8DBWANt_-No-ceGIEdQ"/>
+	<meta name="google-site-verification" content="6gCxurMx4cEDHvpbZN9zaAxMgPwCEQBm951X6Dd4VeI"/>
+	<!-- Start: Facebook Open Graph Meta tags -->
+	<meta property="og:title" content="NitroType.com - Competitive Typing Races"/>
+	<meta property="og:type" content="game"/>
+	<meta property="og:url" content="https://www.nitrotype.com/"/>
+	<meta property="og:image" />
+	<meta property="og:site_name" content="Nitro Type"/>
+	<meta property="fb:admins" content="215019075201673"/>
+	<meta property="og:description" content="Nitro Type pits players against each other in a competitive real time typing race."/>
+	<!-- End Facebook -->
+	<!-- Title -->
+	<title>Nitro Type Garage | View Your Racing Records and Typing Scores</title>
+	<link rel="canonical" href="https://nitrotype.com/garage/" />
+	<link rel="shortcut icon" href="../favicon.ico"/>
+	<link rel="apple-touch-icon" href="../apple-icon.png">
+	<!-- Fonts -->
+	<style>
+		@font-face {
+			font-family: 'Droid Serif';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Droid Serif'), local('DroidSerif'), url('../fonts/DroidSerif.ttf') format('truetype'), url(../fonts/DroidSerif.woff) format('woff2'), url(../fonts/DroidSerif.woff) format('woff');
+		}
+		@font-face {
+			font-family: 'Orbitron';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Orbitron-Bold'), url(../fonts/Orbitron-Bold.ttf), url(../fonts/Orbitron-Bold.woff) format('woff2'), url(../fonts/Orbitron-Bold.woff) format('woff');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+		}
+	</style>
+	<!-- CSS -->
+			<link rel="stylesheet" href="../dist/site/css/app.min.547.css"/>
+    <script>
+	    if (navigator.userAgent.match(/MSIE [5|6|7|8|9]\./)) {
+		    location.href = '/failbrowser';
+	    }
+        /**
+         * 0 = hash
+         * 1 = userid
+         * 2 = membership (1 = free, 2 = paid)
+         * 3 = remember (ignored)
+         **/
+        function loc(index) {
+            var parts = [];
+            document.cookie.split(/;\s*/g).forEach(function(r){
+                var x = r.split('=');
+                if (x[0] == 'ntuserrem'){
+                    parts = decodeURIComponent(x[1]).split(/</g);
+                }
+            });
+            return parts[index];
+        }
+        function loggedIn() {if(parseInt(loc(1))){return true;}return false;}
+        function paid() {if(parseInt(loc(1)) && parseInt(loc(2)) == 2){return true;}return false;}
+        function env() {return 'production';}
+        window.adRand = Math.floor(Math.random() * 20);
+    </script>
+    <script src="../index/547/bootstrap.js"></script>
+	<script>
+        var NTGLOBALS = (function(){
+            var globals = {
+                LOGGED_IN: loggedIn(),
+                MEMBERSHIP: paid()?'gold':'basic',
+                ENV: env(),
+                RECENT_NEWS: "1508270040",
+	            REALTIME_SERVERS: ["realtime1.nitrotype.com","realtime2.nitrotype.com","realtime3.nitrotype.com","realtime4.nitrotype.com","realtime5.nitrotype.com"],
+                            };
+            NTBOOTSTRAP().forEach(function(item){
+                globals[item[0]] = item[1];
+            });
+            return function(key) {
+                if (typeof globals[key] == 'undefined') {
+                    console.error('Missing NTGLOBALS var: ' + key);
+                }
+                return globals[key];
+            };
+        })();
+	</script>
+				<script type="text/javascript">
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+	(function() {
+		var gads = document.createElement('script');
+		gads.async = true;
+		gads.type = 'text/javascript';
+		var useSSL = 'https:' == document.location.protocol;
+		gads.src = (useSSL ? 'https:' : 'http:') +
+			'https://www.googletagservices.com/tag/js/gpt.js';
+		var node = document.getElementsByTagName('script')[0];
+		node.parentNode.insertBefore(gads, node);
+	})();
+	</script>
+	<script type="text/javascript">
+				googletag.cmd.push(function() {
+						googletag.defineSlot('/35254017/NT_336x280_Garage_Right_Floor1', [336, 280], 'div-gpt-ad-1406939054395-0').addService(googletag.pubads());
+						googletag.defineSlot('/35254017/NT_728x90_Garage_ATF_Floor1', [728, 90], 'div-gpt-ad-1406939277548-0').addService(googletag.pubads());
+                        googletag.defineSlot('/35254017/NT_728x90_Garage_BTF_Floor1', [728, 90], 'div-gpt-ad-1428448689838-0').addService(googletag.pubads());
+			googletag.pubads().enableSingleRequest();
+			googletag.enableServices();
+		});
+			</script>
+	<!-- JS -->
+			<script src="../dist/site/js/libs.min.547.js"></script>
+			<script src="../dist/site/js/app.min.547.js"></script>
+		<script>
+		window.adb = true;
+		function detectAdb() {
+			if (document.body.SuperAdBlocker_WebBrowser_ID) {
+				window.adb = true;
+			}
+			return (window.adb)?1:0;
+		}
+	</script>
+	<script src="https://www.nitrotype.com/dist/site/misc/ads/show_ads.547.js?loadads=http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+	<script>
+					(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-231012-16', {sampleRate: 10});
+			//ga('send', 'pageview');   // because of custom analytics, this must be sent after custom metrics are set
+			</script>
+</head>
+<body class="halloween">
+	<div class="wrap">
+		<div class="app-container">
+			<div class="app-header">
+				<div class="header-wrap clearfix" id="nav">
+					<div class="logo">
+													<div class="headerEvent">
+								<p class="headerEvent-annual">
+									Annual
+								</p>
+								<p class="headerEvent-title">
+									halloween <br/> Event
+								</p>
+								<p class="headerEvent-bonus">
+									Earn Bonus Prizes:
+								</p>
+								<a href="news/read/118/happy-hallowampus-2017-.html" class="headerEvent-link">
+									Learn More
+								</a>
+							</div>
+											</div>
+					<div class="left-box">
+						Left
+					</div>
+					<div class="right-box">
+													<a href="#" class="log-in login-link">Log In</a>
+							<hr/>
+							<a href="#" class="register register-link">Sign Up</a>
+											</div>
+					<div class="navigation">
+						<ul>
+							<li id="navRace" class=""><a href="../race/">Race</a></li>
+							<li id="navGarage" class="active"><a href="../garage/">Garage</a></li>
+							<li id="navStats" class=""><a href="../stats/">Stats</a></li>
+							<li id="navDealership" class=""><a href="dealership.html">Dealership</a></li>
+							<li id="navFriends" class=""><a href="friends.html">Friends</a><span class="navigation-jewel">0</span></li>
+							<li id="navTeam" class=""><a href="team.html">Team</a><span class="navigation-jewel">0</span></li>
+							<li id="navAchievements" class=""><a href="achievements.html">Achievements</a></li>
+							<li id="navLeaderboards" class=""><a href="leaderboards.html">Leaderboards</a></li>
+							<li id="navNews" class=""><a href="news.html">News</a><span class="navigation-jewel">1</span></li>
+							<li id="navSupport" class=""><a href="support.html">Support</a></li>
+						</ul>
+					</div>
+				</div>
+				<a href="/" class="logo-click-box" mobile-hidden></a>
+			</div>
+			<div class="app-content">
+															<div class="leaderboard">
+					<!-- NT_728x90_Garage_ATF_Floor1 -->
+			<div id="div-gpt-ad-1406939277548-0" style="width:728px; height:90px;">
+				<script type="text/javascript">
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1406939277548-0'); });
+				</script>
+			</div>
+							<!-- Gold Callout -->
+							<a href="upgrade.html" class="gold-callout">
+								<h1>Get Gold Membership</h1>
+								<p>Remove Ads!</p>
+								<p>Instant Nitro Cash!</p>
+								<span>Upgrade Now!</span>
+							</a>
+						</div>
+				<div id="app-loader" class="clearfix" style="display:block">
+					<div class="loading" style="display: block;"><div class="spinner"></div></div>
+				</div>
+				<div id="app" class="clearfix" style="display:none">
+					<div class="page-garage clearfix">
+	<div id="profileView"></div>
+	<div class="right-box">
+					<!-- NT_336x280_Garage_Right_Floor1 -->
+			<div id="div-gpt-ad-1406939054395-0" style="width:336px; height:280px;">
+				<script type="text/javascript">
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1406939054395-0'); });
+				</script>
+			</div>
+		<div class="under-ad"></div>
+	</div>
+			<div class="mid-leaderboard clearfix">
+                    <!-- /35254017/NT_728x90_Garage_BTF_Floor1 -->
+            <div id="div-gpt-ad-1428448689838-0" style="height:90px; width:728px;">
+                <script type="text/javascript">
+                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1428448689838-0'); });
+                </script>
+            </div>
+					</div>
+	<div class="owned-cars clearfix"></div>
+</div>
+				</div>
+                			</div>
+			<div class="app-footer">
+			  <div class="pal bg-c-dk">
+				<div class="g">
+				  <div class="g-b g-b--9of12_m">
+					<div class="g">
+					  <div class="g-b g-b--4of12_m">
+						<ul class="list list--xs list--m-xs">
+						  <li class="list-item"><a class="link--white" href="../race/">Race</a></li>
+						  <li class="list-item"><a class="link--white" href="../garage/">Garage</a></li>
+						  <li class="list-item"><a class="link--white" href="../stats/">Stats</a></li>
+						  <li class="list-item"><a class="link--white" href="dealership.html">Dealership</a></li>
+						  <li class="list-item"><a class="link--white" href="friends.html">Friends</a></li>
+						</ul>
+					  </div>
+					  <div class="g-b g-b--4of12_m">
+						<ul class="list list--xs list--m-xs">
+						  <li class="list-item"><a class="link--white" href="team.html">Team</a></li>
+						  <li class="list-item"><a class="link--white" href="achievements.html">Achievements</a></li>
+						  <li class="list-item"><a class="link--white" href="leaderboards.html">Leaderboards</a></li>
+						  <li class="list-item"><a class="link--white" href="news.html">News</a></li>
+						  <li class="list-item"><a class="link--white" href="support.html">Support</a></li>
+						</ul>
+					  </div>
+					  <div class="g-b g-b--4of12_m">
+						<ul class="list list--xs list--m-xs">
+						  <li class="list-item"><a class="link--white" href="upgrade.html">Upgrade</a></li>
+						  <li class="list-item"><a class="link--white" href="support/sitemap.html">Sitemap</a></li>
+						  <li class="list-item"><a class="link--white" href="profile.html">My Profile</a></li>
+						</ul>
+					  </div>
+					</div>
+				  </div>
+				  <div class="g-b g-b--3of12_m">
+				  <div class="logo-section">
+					<p class="mbs">Powered by:</p>
+					<a href="http://www.teaching.com/" target="_blank" class="logo--white logo--tc-new">
+					  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 439 119" width="179" height="48">
+						<defs><style>.a{fill:#fd2;}.b{fill:#fff;}.c{fill:#262626;}.d{fill:#fedc3d;}</style></defs>
+						<title>teaching-nl-logo</title>
+						<path class="a" d="M350.5,50.56c0,12.83-.11,26.61,0,40.07,31.32.32,88.51,1,88.51,1l-.53-41.34C438.58,50.35,377.86,49.92,350.5,50.56Z"/><path class="b" d="M121.11,49.29V84.16h-8.44V49.29H99.09V41.34h35.59v7.95Z"/><path class="b" d="M159.8,75.58c-1.5,5.09-6.31,9.43-13.58,9.43-8.23,0-15.39-5.83-15.39-15.9,0-9.43,7.05-15.58,14.75-15.58,9.19,0,14.75,5.83,14.75,15.37,0,1.17-.11,2.33-.11,2.44H138.85a7.32,7.32,0,0,0,7.59,6.78c3.74,0,5.88-1.91,6.84-4.56Zm-7.48-9.75c-.11-3-2-5.83-6.73-5.83a6.57,6.57,0,0,0-6.73,5.83Z"/><path class="b" d="M172.52,67l7.38-1.06c1.71-.21,2.24-1.06,2.24-2.12,0-2.12-1.6-3.82-5-3.82s-5.45,2.23-5.67,4.77l-7.16-1.48c.53-4.66,4.81-9.75,12.83-9.75,9.51,0,13,5.3,13,11.24V79.39c0,1.59.21,3.71.32,4.66H183.1a17.34,17.34,0,0,1-.32-3.6A10,10,0,0,1,174,84.91c-6.41,0-10.26-4.24-10.26-8.9C163.65,70.7,167.6,67.73,172.52,67Zm9.62,5.09V70.7l-6.73,1.06c-2,.32-3.74,1.48-3.74,3.71,0,1.7,1.28,3.39,3.85,3.39C178.93,79,182.14,77.38,182.14,72.08Z"/><path class="b" d="M202.67,69.22c0,5.41,3.53,8.37,7.7,8.37a6.8,6.8,0,0,0,6.84-5l7.16,2.33c-1.39,5-6,10-14,10a15.43,15.43,0,0,1-15.71-15.69,15.26,15.26,0,0,1,15.5-15.69c8.12,0,12.72,5,14,10l-7.27,2.44a6.5,6.5,0,0,0-6.63-5C206.19,60.95,202.67,63.92,202.67,69.22Z"/><path class="b" d="M237.19,84.06h-8.12V40.49h8.12V56.92c1.92-2.33,5.24-3.29,8.12-3.29,7.59,0,11.12,5.19,11.12,11.77V84.06h-8.12V66.78c0-3.29-1.6-5.94-5.56-5.94-3.42,0-5.45,2.54-5.56,5.83Z"/><path class="b" d="M267.33,39.75a5,5,0,0,1,5,5,4.91,4.91,0,0,1-5,4.88,5,5,0,0,1-5-4.88A5.14,5.14,0,0,1,267.33,39.75Zm-4,44.31V54.38h8.12V84.06Z"/><path class="b" d="M287,84.06h-8.12V54.38h7.8v3.71c1.82-3.07,5.45-4.45,8.66-4.45,7.38,0,10.8,5.19,10.8,11.77V84.06H298V66.78c0-3.29-1.6-5.94-5.56-5.94-3.53,0-5.56,2.76-5.56,6.15V84.06Z"/><path class="b" d="M318.32,83.74a6.67,6.67,0,0,0,6.95,5.62c5.13,0,8-2.54,8-8.27V79c-1.18,1.91-4.06,3.82-8.34,3.82-8,0-13.9-6-13.9-14.42,0-7.84,5.67-14.42,13.9-14.42,4.7,0,7.48,2,8.55,4v-3.5h7.8V81c0,8.16-4.49,15.58-15.71,15.58-8.23,0-13.68-5.09-14.54-10.71Zm15.07-15.37c0-4.56-3.21-7.53-7.05-7.53-4.06,0-7.16,2.86-7.16,7.53s3,7.53,7.16,7.53S333.39,72.92,333.39,68.37Z"/><path class="c" d="M361.94,74.41a2.86,2.86,0,1,1-2.89,2.86A2.86,2.86,0,0,1,361.94,74.41Z"/><path class="c" d="M370.92,72.18c0,2.76,1.82,4.35,4,4.35a3.44,3.44,0,0,0,3.53-2.65l3.74,1.27a7.16,7.16,0,0,1-7.27,5.19,8.07,8.07,0,0,1-8.23-8.16,7.89,7.89,0,0,1,8-8.16c4.28,0,6.63,2.65,7.27,5.19l-3.74,1.27a3.49,3.49,0,0,0-3.42-2.65C372.73,67.84,370.92,69.43,370.92,72.18Z"/><path class="c" d="M399.67,72.18A8.12,8.12,0,1,1,391.54,64,7.92,7.92,0,0,1,399.67,72.18Zm-4.28,0c0-2.86-1.92-4.35-4-4.35s-4,1.48-4,4.35,1.92,4.35,4,4.35S395.39,75,395.39,72.18Z"/><path class="c" d="M402.34,79.92V64.44h4.06v1.91A5.5,5.5,0,0,1,411,64a4.83,4.83,0,0,1,4.6,2.54A5.39,5.39,0,0,1,420.51,64c2.89,0,5.67,1.7,5.67,5.83v10h-4.06V70.7a2.55,2.55,0,0,0-2.78-2.86,2.85,2.85,0,0,0-2.89,3.07v9h-4.17V70.8a2.55,2.55,0,0,0-2.78-2.86A2.85,2.85,0,0,0,406.62,71v9h-4.28Z"/><path class="d" d="M350.5,50.56c0,12.83-.11,26.61,0,40.07,31.32.32,88.51,1,88.51,1l-.53-41.34C438.58,50.35,377.86,49.92,350.5,50.56Z"/><path class="c" d="M361.94,74.41a2.86,2.86,0,1,1-2.89,2.86A2.86,2.86,0,0,1,361.94,74.41Z"/><path class="c" d="M370.92,72.18c0,2.76,1.82,4.35,4,4.35a3.44,3.44,0,0,0,3.53-2.65l3.74,1.27a7.16,7.16,0,0,1-7.27,5.19,8.07,8.07,0,0,1-8.23-8.16,7.89,7.89,0,0,1,8-8.16c4.28,0,6.63,2.65,7.27,5.19l-3.74,1.27a3.49,3.49,0,0,0-3.42-2.65C372.73,67.84,370.92,69.43,370.92,72.18Z"/><path class="c" d="M399.67,72.18A8.12,8.12,0,1,1,391.54,64,7.92,7.92,0,0,1,399.67,72.18Zm-4.28,0c0-2.86-1.92-4.35-4-4.35s-4,1.48-4,4.35,1.92,4.35,4,4.35S395.39,75,395.39,72.18Z"/><path class="c" d="M402.34,79.92V64.44h4.06v1.91A5.5,5.5,0,0,1,411,64a4.83,4.83,0,0,1,4.6,2.54A5.39,5.39,0,0,1,420.51,64c2.89,0,5.67,1.7,5.67,5.83v10h-4.06V70.7a2.55,2.55,0,0,0-2.78-2.86,2.85,2.85,0,0,0-2.89,3.07v9h-4.17V70.8a2.55,2.55,0,0,0-2.78-2.86A2.85,2.85,0,0,0,406.62,71v9h-4.28Z"/><path class="d" d="M42.44,0a42,42,0,0,0-21,78.65V103l20.84,15.69L63.17,103V78.65A42,42,0,0,0,42.44,0ZM59.32,89.36h-29v3.92h29v3.39h-29v3.92h29v.53l-17,12.72-17-12.72V86H59.22v3.39Zm1.07-13.57-1.07.53V82H47.67V44.73s0-1.7.11-3.6C56,41.76,62.32,40,65.2,37.42c2-1.8,1.71-3.6,1.39-4.24C65.74,31.06,63,30,58,30s-8.77,1.48-11.22,4.35A10.2,10.2,0,0,0,45.11,37a51.1,51.1,0,0,1-15.93-5.3c-.11,0-.11-.11-.21-.11a4.13,4.13,0,1,0-4.06,4.66,4.53,4.53,0,0,0,2.67-1,56.22,56.22,0,0,0,16.35,5.51c-.21,3-.21,7.1-.21,7.1V82.15H41.47V44.31a1.92,1.92,0,0,0-3.85,0V82H25.44V76.32l-1.07-.53A38.11,38.11,0,0,1,42.44,3.92a38.08,38.08,0,0,1,18,71.87Zm-11-38.48c.11-.21.32-.32.43-.53,1.71-2,4.49-3,8.34-3a12.24,12.24,0,0,1,4.6.64,8.64,8.64,0,0,1-3,1.59A26.57,26.57,0,0,1,49.38,37.31ZM26.51,31.91a1.6,1.6,0,1,1-1.6-1.59A1.64,1.64,0,0,1,26.51,31.91Z"/>
+					  </svg>
+					</a>
+				  </div>
+				  </div>
+				</div>
+			  </div>
+			  <div class="pal bg-c-xdk">
+				<ul class="list list--inline">
+				  <li class="list-item">
+					<a href="http://www.longislandprogrammingpros.com">
+					  <svg id="twitter" class="icon icon-twitter" viewbox="0 0 24 24">
+						<title>Twitter</title>
+						<path d="M24,4.56a9.83,9.83,0,0,1-2.83.78,4.93,4.93,0,0,0,2.17-2.72,9.86,9.86,0,0,1-3.13,1.2,4.93,4.93,0,0,0-8.39,4.49A14,14,0,0,1,1.67,3.15,4.93,4.93,0,0,0,3.19,9.72,4.9,4.9,0,0,1,1,9.11,4.93,4.93,0,0,0,4.91,14a4.94,4.94,0,0,1-2.22.08,4.93,4.93,0,0,0,4.6,3.42,9.9,9.9,0,0,1-7.29,2,13.94,13.94,0,0,0,7.55,2.21,13.93,13.93,0,0,0,14-14.65A10,10,0,0,0,24,4.56Z"/>
+					  </svg>
+					</a>
+				  </li>
+				  <li class="list-item">
+					<a href="https://www.facebook.com/nitrotype">
+					  <svg id="facebook" class="icon icon-twitter" viewbox="0 0 24 24" width="15" height="15">
+						<title>Facebook</title>
+						<path d="M9,8H6v4H9V24h5V12h3.64L18,8H14V6.33c0-1,.19-1.33,1.11-1.33H18V0H14.19C10.6,0,9,1.58,9,4.61Z"/>
+					  </svg>
+					</a>
+				  </li>
+				  <li class="list-item"><small>2017 © Nitrotype.com</small></li>
+				  <li class="list-item">|</li>
+				  <li class="list-item"><a class="link--xs link--white" href="support/tos.html">Terms of Service</a></li>
+				  <li class="list-item">|</li>
+				  <li class="list-item"><a class="link--xs link--white" href="support/privacy.html">Privacy Policy</a></li>
+				  <li class="list-item">|</li>
+				  <li class="list-item"><a class="link--xs link--white" href="http://www.funtotype.com/">Typing Games</a></li>
+				  <li class="list-item">|</li>
+				  <li class="list-item"><a class="link--xs link--white" href="http://www.typing.com/">Typing Lessons</a></li>
+				  <li class="list-item">|</li>
+				  <li class="list-item"><a class="link--xs link--white" href="support.html">Contact Us</a></li>
+				</ul>
+			  </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
