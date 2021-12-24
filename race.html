@@ -1,0 +1,258 @@
+<!doctype html>
+<html style="background-color: #2d2e2e">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<!-- Meta -->
+	<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+	<meta name="description" content="Free worldwide real-time typing competition. Compete in typing races while improving your typing skills."/>
+	<meta name="author" content="FTW Innovations, Inc"/>
+<!--	<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+	<!-- ohPLHa4nzsuJ6YDnDSqcyN7YoCc --> <!-- for alexa -->
+	<meta name="google-site-verification" content="5KYNE_WO1doqosyiF3WC2_5F8DBWANt_-No-ceGIEdQ"/>
+	<meta name="google-site-verification" content="6gCxurMx4cEDHvpbZN9zaAxMgPwCEQBm951X6Dd4VeI"/>
+	<!-- Start: Facebook Open Graph Meta tags -->
+	<meta property="og:title" content="NitroType.com - Competitive Typing Races"/>
+	<meta property="og:type" content="game"/>
+	<meta property="og:url" content="https://www.nitrotype.com/"/>
+	<meta property="og:image" />
+	<meta property="og:site_name" content="Nitro Type"/>
+	<meta property="fb:admins" content="215019075201673"/>
+	<meta property="og:description" content="Nitro Type pits players against each other in a competitive real time typing race."/>
+	<!-- End Facebook -->
+	<!-- Title -->
+	<title>Nitro Type Race</title>
+	<link rel="canonical" href="https://nitrotype.com/race/" />
+	<link rel="shortcut icon" href="../favicon.ico"/>
+	<link rel="apple-touch-icon" href="../apple-icon.png">
+	<!-- Fonts -->
+	<style>
+		@font-face {
+			font-family: 'Droid Serif';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Droid Serif'), local('DroidSerif'), url('../fonts/DroidSerif.ttf') format('truetype'), url(../fonts/DroidSerif.woff) format('woff2'), url(../fonts/DroidSerif.woff) format('woff');
+		}
+		@font-face {
+			font-family: 'Orbitron';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Orbitron-Bold'), url(../fonts/Orbitron-Bold.ttf), url(../fonts/Orbitron-Bold.woff) format('woff2'), url(../fonts/Orbitron-Bold.woff) format('woff');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+		}
+	</style>
+	<!-- CSS -->
+			<link rel="stylesheet" href="../dist/site/css/app.min.542.css"/>
+    <script>
+	    if (navigator.userAgent.match(/MSIE [5|6|7|8|9]\./)) {
+		    location.href = '/failbrowser';
+	    }
+        /**
+         * 0 = hash
+         * 1 = userid
+         * 2 = membership (1 = free, 2 = paid)
+         * 3 = remember (ignored)
+         **/
+        function loc(index) {
+            var parts = [];
+            document.cookie.split(/;\s*/g).forEach(function(r){
+                var x = r.split('=');
+                if (x[0] == 'ntuserrem'){
+                    parts = decodeURIComponent(x[1]).split(/</g);
+                }
+            });
+            return parts[index];
+        }
+        function loggedIn() {if(parseInt(loc(1))){return true;}return false;}
+        function paid() {if(parseInt(loc(1)) && parseInt(loc(2)) == 2){return true;}return false;}
+        function env() {return 'production';}
+        window.adRand = Math.floor(Math.random() * 20);
+    </script>
+    <script src="../index/542/bootstrap.js"></script>
+	<script>
+        var NTGLOBALS = (function(){
+            var globals = {
+                LOGGED_IN: loggedIn(),
+                MEMBERSHIP: paid()?'gold':'basic',
+                ENV: env(),
+                RECENT_NEWS: "1497460738",
+	            REALTIME_SERVERS: ["realtime1.nitrotype.com"],
+                                        TIPS: ["Typing accurately will almost always get you to the finish line faster than trying to type too fast and making lots of mistakes.","Every now and then a strange hairy racer named The Wampus might show up. Trust me, you will want to beat this guy!","Need some no pressure typing practice? Try a \"Practice Race\", or you could visit our other product Typing.com for some structured typing lessons.","At the end of a line you should press SPACE, not ENTER. Pressing the ENTER key will activate a nitro!","Most keyboards have a small bump on the F and J keys (the keys that your index fingers rest on). This is intended to help you find your starting position without having to stop and look at your hands.","If you are having trouble typing the Bottom Row keys, try moving your chair back and elevating your wrists a bit.","When you need to type a capital letter, hold the SHIFT key with the pinkie finger opposite the hand typing the letter. For example, to type a capital F your right pinkie would hold SHIFT while your left index hits F.","Be sure to frequently check out the News page for interesting tips as well as product updates and changes. And be a part of the discussion!","The Scoreboard is a great way to show off your skills!  You don't have to be the fastest typist in the world to place. You can also be one of our most active racers.","Typing Speed is calculated like this: The total characters typed are divided by five, which gives the total Words typed. Divide that by the fractional minutes, and you have WPM.","If you ever find a bug on Nitro Type, please let us know! And of course be as succinct and descriptive as possible about what happened, and what steps caused it.","While typing, try using quick strokes. Hit the keys and bounce off. Don't hold down or smash the keys. Just stroke, and bounce your finger back up.","Your body posture is extremely important while typing. Sit erect, keep your feet flat on the floor, and your wrists elevated off the desk or keyboard. This helps your accuracy, speed, AND your health.","Only move the finger required for the key stroke. Do not let those other fingers wander about the keyboard. They should always rest lightly on the Home Row.","Home row, home row, home row. We've said it before, and we'll say it again. Keep your fingers on the Home Row keys: ASDF and JKL; (this may vary depending on your keyboard layout)","Type spaces with whichever thumb feels most comfortable. Some insist that the right thumb is the way to go, but really it makes no difference.","Nitros are an excellent way to get a better place in a race, however they do not increase your WPM typing speed.","A Nitro allows you to skip the current word by pressing the ENTER key. Save these for big or extra tricky words.","Winning a race earns you 2 free nitros! Nitros can also be purchased in the Dealership.","Be sure to check out the Achievements page from time to time to see your progress. You can win cash, nitros, and special rare cars that can't be bought."],
+                                            CHAT_TEXTS: {"Greetings":["Hello.","Hi.","Howdy.","Yo!","What's up.","How are you."],"Answers":["Yes.","Yes!","Yes!!!","No.","No!","Nooo!","OK.","Cool.","Thanks.","Thanks!","You're welcome.","You too.","You too!","Good.","Fine.","Great.","Amazing.","Superb.","Insanely fantastic.","Oh.","Oooh.","Gotcha.","Later.","See you later!","I don't understand.","I like pie.","Mmmm pie...","Pie pie pie pie pie.","One minute.","Two minutes.","Five minutes.","Hot dang.","OMG","LOL","ROFL",":)",":D",";)",":P",":O"],"Statements":["I'm ready.","I'm not quite ready.","Let's go!","I'm waiting for other people.","I shall win.","I shall lose.","You shall win.","You shall lose.","Good luck!","I'm scared.","Check out my car!","I like your car!","I like your title.","I like your name.","Good race!","Congratulations!","One more race.","That was close!","Great job!","Wow, that was tough.","Too easy!","You're a fast typer!","That was my fastest ever!","New record!","I am the world's fastest typist!","I did poorly.","You beat me!","Wow, epic fail...","You are famous!","Good racing you!","You let me win!","I didn't let you win!","I had no nitros left.","I used all my nitros and still lost!","That nitro saved me!","You won by a nose hair!","I won by a nose hair!","Photo finish!","I'm tired.","I'm unfocused.","I have been playing for hours.","I have to go.","Bye.","Be right back.","I need to eat.","No nitros.","Don't use nitros.","I'm out of nitros.","I hate nitros.","I never use nitros.","I always use nitros.","I hate this game.","I love this game.","I love using nitros!","I love Nitro Type!","I'm addicted to this game.","Stupid bots!","My mouse fell off my desk.","My computer crashed.","My computer froze...","My computer exploded.","I just exploded.","My face just melted.","Holy cow.","Oppa Nitro Style!","I'm not cheating!"],"Question":["Are you ready?","How are you doing?","Are you cheating?","Do you like my car?","Do you like my paint job?","Do you like my title?"]},
+                                };
+            NTBOOTSTRAP().forEach(function(item){
+                globals[item[0]] = item[1];
+            });
+            return function(key) {
+                if (typeof globals[key] == 'undefined') {
+                    console.error('Missing NTGLOBALS var: ' + key);
+                }
+                return globals[key];
+            };
+        })();
+	</script>
+				<script type="text/javascript">
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+	(function() {
+		var gads = document.createElement('script');
+		gads.async = true;
+		gads.type = 'text/javascript';
+		var useSSL = 'https:' == document.location.protocol;
+		gads.src = (useSSL ? 'https:' : 'http:') +
+			'https://www.googletagservices.com/tag/js/gpt.js';
+		var node = document.getElementsByTagName('script')[0];
+		node.parentNode.insertBefore(gads, node);
+	})();
+	</script>
+	<script type="text/javascript">
+				googletag.cmd.push(function() {
+						googletag.defineSlot('/35254017/NT_728x90_Race_ATF', [728, 90], 'div-gpt-ad-1403041492559-5').addService(googletag.pubads());
+						googletag.defineSlot('/35254017/NT_728x90_Race_BTF', [728, 90], 'div-gpt-ad-1403045072781-0').addService(googletag.pubads());
+			googletag.pubads().enableSingleRequest();
+			googletag.enableServices();
+		});
+			</script>
+	<!-- JS -->
+			<script src="../dist/site/js/libs.min.542.js"></script>
+					<script src="../dist/site/js/race-libs.min.542.js"></script>
+			<script src="../dist/site/js/app.min.542.js"></script>
+		<script>
+		window.adb = true;
+		function detectAdb() {
+			if (document.body.SuperAdBlocker_WebBrowser_ID) {
+				window.adb = true;
+			}
+			return (window.adb)?1:0;
+		}
+	</script>
+	<script src="https://www.nitrotype.com/dist/site/misc/ads/show_ads.542.js?loadads=http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+	<script>
+					(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-231012-16', {sampleRate: 10});
+			//ga('send', 'pageview');   // because of custom analytics, this must be sent after custom metrics are set
+			</script>
+</head>
+<body class="">
+	<div class="wrap">
+		<div class="app-container">
+			<div class="app-header">
+				<div class="header-wrap clearfix" id="nav">
+					<div class="logo">
+											</div>
+					<div class="left-box">
+						Left
+					</div>
+					<div class="right-box">
+													<a href="#" class="log-in login-link">Log In</a>
+							<hr/>
+							<a href="#" class="register register-link">Sign Up</a>
+											</div>
+					<div class="navigation">
+						<ul>
+							<li id="navRace" class="active"><a href="../race/">Race</a></li>
+							<li id="navGarage" class=""><a href="../garage/">Garage</a></li>
+							<li id="navStats" class=""><a href="../stats/">Stats</a></li>
+							<li id="navDealership" class=""><a href="dealership.html">Dealership</a></li>
+							<li id="navFriends" class=""><a href="friends.html">Friends</a><span class="navigation-jewel">0</span></li>
+							<li id="navTeam" class=""><a href="team.html">Team</a><span class="navigation-jewel">0</span></li>
+							<li id="navAchievements" class=""><a href="achievements.html">Achievements</a></li>
+							<li id="navLeaderboards" class=""><a href="leaderboards.html">Leaderboards</a></li>
+							<li id="navNews" class=""><a href="news.html">News</a><span class="navigation-jewel">1</span></li>
+							<li id="navSupport" class=""><a href="support.html">Support</a></li>
+						</ul>
+					</div>
+				</div>
+				<a href="/" class="logo-click-box" mobile-hidden></a>
+			</div>
+			<div class="app-content">
+															<div class="leaderboard">
+				<!-- NT_728x90_Race_ATF -->
+		<div id="div-gpt-ad-1403041492559-5" style="width:728px; height:90px;">
+			<script type="text/javascript">
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1403041492559-5'); });
+			</script>
+		</div>
+							<!-- Gold Callout -->
+							<a href="upgrade.html" class="gold-callout">
+								<h1>Get Gold Membership</h1>
+								<p>Remove Ads!</p>
+								<p>Instant Nitro Cash!</p>
+								<span>Upgrade Now!</span>
+							</a>
+						</div>
+				<div id="app-loader" class="clearfix" style="display:block">
+					<div class="loading" style="display: block;"><div class="spinner"></div></div>
+				</div>
+				<div id="app" class="clearfix" style="display:none">
+					<div class="page-race" style="position: relative;">
+	<!-- The focus Thing -->
+	<div class="mobile-focus-alert" id="mobile-focus-alert">
+		<p>Tap Here</p>
+		<p>To Activate Your Keyboard.</p>
+	</div>
+	<!-- The pro tip -->
+	<div class="race-tip" style="display:none"><span>Pro Tip:</span> </div>
+	<!-- Friend race message, when not the leader -->
+	<div class="friends-race" style="display:none">
+		<span>Please wait:</span> When the race leader starts the race, you will be given a few moments before you can start typing.
+	</div>
+	<!-- The friends race controls -->
+	<div class="friends-controls" style="display:none">
+		<a href="#" class="button invite">Invite Your Friends</a>
+		<a href="#" class="button button-red button-race start-race">Start Race</a>
+	</div>
+	<!-- Regular track stuff -->
+	<canvas id="race-track" width="980" height="573"></canvas>
+	<div id="track-loader"></div>
+	<div id="sound-tooltip" class="tooltip-hover first-race-tip" style="display:none">Game sounds and music controls</div>
+	<div id="settings-tooltip" class="tooltip-hover settings-tooltip first-race-tip" style="display:none">Adjust race track<br/>performance settings</div>
+	<input class="mobile-race-input" id="race-input" type="password"/> <!-- mobile keyboard input -->
+	<div class="sound-fx-toggle" id="sound-fx-toggle"></div>
+	<div class="sound-music-toggle" id="sound-music-toggle"></div>
+	<div class="line-type-toggle" id="line-type-toggle"></div>
+    <div class="settings-button" id="settings-button"></div>
+	<div class="nitros-tooltip tooltip-nostyle" id="nitros-tooltip" data-tip="Nitros allow you to skip a word with the ENTER key.  As you type faster you unlock more nitros per race, up to 3 maximum."></div>
+</div>
+	<br/>
+	<div class="mid-leaderboard clearfix">
+					<!-- NT_728x90_Race_BTF -->
+			<div id="div-gpt-ad-1403045072781-0" style="width:728px; height:90px;">
+				<script type="text/javascript">
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1403045072781-0'); });
+				</script>
+			</div>
+				</div>
+				</div>
+                			</div>
+			<div class="app-footer">
+				<p class="main-links">
+					<a href="../race/">Race</a>
+					<a href="../garage/">Garage</a>
+					<a href="../stats/">Stats</a>
+					<a href="dealership.html">Dealership</a>
+					<a href="friends.html">Friends</a>
+					<a href="team.html">Team</a>
+					<a href="achievements.html">Achievements</a>
+					<a href="scoreboard.html">Scoreboard</a>
+					<a href="news.html">News</a>
+					<a href="support.html">Support</a>
+					<a href="upgrade.html">Upgrade</a>
+					<a href="support/sitemap.html">Sitemap</a>
+					<a href="profile.html">My Profile</a>
+				</p>
+				<p class="sub-links">
+					<a href="support/tos.html">Terms of Service</a>
+					<a href="support/privacy.html">Privacy Policy</a>
+					<a href="http://www.funtotype.com/">Typing Games</a>
+					<a href="http://www.typingweb.com/">Typing Lessons</a>
+					<a href="support.html">Contact Us</a>
+					<small>2017 &copy; Teaching.com</small>
+				</p>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"8a681dbb8f","applicationID":"61348965","transactionName":"MVdVZBNTChAEAhIPCggdYkIIHQ0NAQQeSBUOQg==","queueTime":0,"applicationTime":1,"atts":"HRBWEltJGR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
